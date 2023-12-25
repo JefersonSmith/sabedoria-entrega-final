@@ -1,12 +1,12 @@
+import { RouterMain } from './routes'
+import 'react-toastify/dist/ReactToastify.css'
 
-import './App.css'
 
 function App() {
-
-
+  
   return (
     <>
-      <h1>Olá Mundo!</h1>
+    <RouterMain />
     </>
   )
 }
