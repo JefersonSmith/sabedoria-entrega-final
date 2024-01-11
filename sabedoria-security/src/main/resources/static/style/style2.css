@@ -1,0 +1,220 @@
+:root {
+    --vermelho: #FF0751;
+}
+ 
+#nav {
+    margin: 0 100px;
+}
+ 
+.bg-principal {
+   background-image: url(/img/bg-principal.svg);
+   background-repeat: no-repeat;
+   background-position: top right;
+   background-size: 60%;
+}
+ 
+.botao {
+    border-radius: 25px;
+    border: 2px solid var(--vermelho);
+    width: 150px;
+    text-align: center;
+    background-color: transparent;
+ 
+}
+ 
+ 
+.fonte {
+    color: #313131;
+    font-family: Rajdhani;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 33px;
+    /* 183.333% */
+}
+ 
+ 
+.texto-principal {
+    font-family: Rajdhani;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 87px;
+    /* 108.75% */
+ 
+}
+ 
+#p1 {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    /* 147.826% */
+}
+ 
+.pesquisa {
+    border: solid 2px;
+    border-radius: 50px;
+    width: 889px;
+    height: 100px;
+    list-style: none;
+ 
+}
+ 
+.busca {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #4A90E2;
+    box-shadow: 0px 20px 30px 0px rgba(24, 30, 54, 0.04);
+}
+ 
+.mapa {
+    height: 815px;
+}
+ 
+ 
+.logo {
+    width: 66px;
+    margin-top: -10px;
+}
+ 
+.contato-home {
+    background-color: #fece02;
+    color: #30353E;
+    width: 100%;
+}
+ 
+.cor-vermelho {
+    color: var(--vermelho);
+}
+ 
+.cor-ptera {
+    color: black;
+}
+ 
+ 
+.botao-nav {
+    border: 1px solid;
+    border-radius: 25px;
+    width: 150px;
+    text-align: center;
+    border-color: var(--vermelho);
+    margin-top: 5px;
+ 
+}
+ 
+ 
+.botao-nav2 {
+    width: 150px;
+    text-align: center;
+    margin-top: 5px;
+}
+ 
+.bt-sn{
+    color: black;
+}
+.texto-logo {
+    color: var(--vermelho);
+    font-size: 22px;
+}
+ 
+.como-funciona {
+    background-color: transparent;
+    border: none;
+}
+ 
+.foto-mapa {
+    width: 100%;
+}
+ 
+/* efeito de escrever */
+.escrevendo {
+    margin: auto;
+    font-family: monospace;
+    width: 14ch;
+    border-right:4px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digitando 2.5s steps(14) infinite alternate, piscando 0.5s infinite step-end alternate;
+}
+ 
+.botao-cadastro2 {
+    border-radius: 15px !important;
+    height: 40px !important;
+    width: 100px !important;
+    color: #FECE02 !important;
+    background-color: #FF0751 !important;
+    font-weight: bold !important;
+}
+ 
+.botao-cadastro2:hover {
+    background-color: #fc3e77 !important;
+}
+ 
+.rodape{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #90EEF0;
+    margin-top: 20PX;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ 
+.rodape img{
+    cursor: pointer;
+}
+ 
+@keyframes digitando{
+    0%{
+        width: 0;
+    }
+    80%, 100%{
+        width: 14ch;
+    }
+ 
+}
+ 
+@keyframes piscando{
+    50%{
+        border-color: transparent;
+    }
+}
+ 
+@media (max-width: 800px) {
+ 
+/* fim do efeito de escrever */
+ 
+    .bg-principal {
+        background-image: url(/img/bg-principal.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 100%;
+     }
+ 
+    .texto-principal {
+        font-family: Rajdhani;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height:57px;
+    }
+ 
+    #p1 {
+        text-align: center;
+        font-family: Roboto;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34px;
+        /* 147.826% */
+    }
+ 
+   
+ 
+}

@@ -1,0 +1,17 @@
+main {
+    padding: 50px;
+}
+
+.titulo-cadastros {
+    padding: 10px;
+}
+
+div .col-md-6.text-center {
+    margin-top: 31px;
+}
+
+@media screen and (max-width: 768px) {
+    div .col-md-6.text-center {
+        display: none;
+    }
+}

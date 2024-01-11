@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout (~{::title}, ~{::main}, _, ~{::scripts})}">
+<head>
+  <title>Lista de Mentorados</title>
+</head>
+<body>
+  <main>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Foto</th>
+                  <th>Idade</th>
+                  <th>Profissão</th>
+                  <th>CPF</th>
+                  <th>Endereço</th>
+                  <th>Email</th>
+                  <th>Ações</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="cliente : ${clientes}">
+                  <td th:text="${cliente.id}"></td>
+                  <td th:text="${cliente.nome}"></td>
+				  <td>
+					<img alt="Image" class="img_prod" height="70px" width="50px"
+					th:src="|/imagem/${cliente.id}|" />
+
+				  </td>                  
+				  <td th:text="${cliente.idade}"></td>
+                  <td th:text="${cliente.profissao}"></td>
+                  <td th:text="${cliente.cpf}"></td>
+                  <td th:text="${cliente.endereco}"></td>
+                  <td th:text="${cliente.email}"></td>
+
+
+							<td>
+								<a th:href="@{/{id}/editar (id=${cliente.id})}" class="btn btn-warning">
+									Editar
+								</a>
+								<a th:href="@{/{id}/excluir (id=${cliente.id})}" class="btn btn-danger"
+									onclick="return confirm('Tem certeza que deseja excluir o cliente?');">
+									Excluir
+								</a>
+							</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <th:block th:fragment="scripts">
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </th:block>
+</body>
+</html>

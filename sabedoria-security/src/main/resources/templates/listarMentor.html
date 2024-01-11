@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	<title>Listagem de Mentores</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-light">
+		<div class="container justify-content-start">
+			<a class="navbar-brand" href="/listarMentor">Mentores</a>
+			<a class="navbar-brand" href="/listar">Mentorados</a>
+			<a class="navbar-brand" href="/listarMonitorias">Monitorias</a>
+
+			<a class="navbar-brand" href="/">Sair</a>
+
+		</div>
+	</nav>
+
+	<main class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Listagem de Mentores</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Foto</th>
+							<th scope="col">Idade</th>
+							<th scope="col">Profissão</th>
+
+							<th scope="col">CPF</th>
+							<th scope="col">Endereço</th>
+							<th scope="col">Email</th>
+
+							<th scope="col">Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="mentor : ${mentors}">
+							<th scope="row" th:text="${mentor.id}"></th>
+							<td th:text="${mentor.nome}"></td>
+
+							<td>
+								<img alt="Image" class="img_prod" height="70px" width="50px"
+									th:src="|/imagemMentor/${mentor.id}|" />
+
+							</td>
+							<td th:text="${mentor.idade}"></td>
+							<td th:text="${mentor.profissao}"></td>
+							<td th:text="${mentor.cpf}"></td>
+							<td th:text="${mentor.endereco}"></td>
+							<td th:text="${mentor.email}"></td>
+
+							<td>
+								<a th:href="@{/{id}/editarMentor (id=${mentor.id})}" class="btn btn-warning">
+									Editar
+								</a>
+								<a th:href="@{/mentor/{id}/excluir (id=${mentor.id})}" class="btn btn-danger"
+									onclick="return confirm('Tem certeza que deseja excluir o mentor?');">
+									Excluir
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<a th:href="cadastrarMentor" class="btn btn-primary">Cadastrar novo Mentor</a>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

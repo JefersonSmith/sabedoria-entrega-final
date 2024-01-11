@@ -1,0 +1,50 @@
+.bloco1{
+    background-color: #F2F2F2;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+}
+section.bloco1{
+    background: linear-gradient(#f7fbfe, #e9edff);
+}
+.titulo{
+    color: red;
+    text-align: center;
+}
+h2.titulo{
+    padding: 30px;
+}
+.titulo_img {
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+    font-weight: bolder;
+   
+   
+}
+
+@media (max-width: 700px) {
+.titulo{
+    display: flex;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+h2.titulo{
+    padding: 20px;
+}
+.bloco1{
+    width: 100%;
+    padding: 30px;
+    text-align:center;
+}
+.titulo_img {
+    margin-top: 19vh;
+}
+}

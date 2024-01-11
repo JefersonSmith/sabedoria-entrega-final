@@ -1,0 +1,63 @@
+/* Reset some default styles */
+body, h1, h2, p, label, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h5.card-title {
+    padding: 5px;
+}
+
+.titulo-1{
+    max-width: 1000px;
+    display: flex;
+    justify-content: start;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.titulo-1 img {
+    max-width: 200px;
+    height: 30px;
+}
+div.container-1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FFE7F4;;
+    border-radius: 10px;
+}
+div.link {
+    display: flex;
+    justify-content: end;
+    margin: 100px 85px 0 0;
+}
+
+.alinhar-img {
+    margin: 50px 0 0 0;
+}
+
+.alinhar-img img {
+    width:100%;
+}
+
+div.col-md-8 {
+    display: flex;
+    align-items: center;
+    
+}
+
+div.card-body {
+    margin: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    img.img-fluid {
+        display: none;
+    }
+
+div.card-body {
+    margin: 30px;
+}
+}

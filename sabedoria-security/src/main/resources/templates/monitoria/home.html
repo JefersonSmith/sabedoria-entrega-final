@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout (~{::title}, ~{::main}, _, ~{::scripts})}">
+<head>
+  <title>Lista de Monitorias</title>
+</head>
+<body>
+  <main>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Mentor</th>
+                  <th>Cliente</th>
+                  <th>Horário</th>
+                  <th>Ações</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="monitoria : ${monitorias}">
+                  <td th:text="${monitoria.id}"></td>
+                  <td th:text="${monitoria.mentor.nome}"></td>                
+				  <td th:text="${monitoria.cliente.nome}"></td>
+				  <td th:text="${#temporals.format(monitoria.horario, 'dd/MM/yyyy HH:mm')}"></td>
+
+
+				  <td>
+					  <a th:href="@{'/excluirMonitoria?id=' + ${monitoria.id}}" class="btn btn-danger"
+						  onclick="return confirm('Tem certeza que deseja excluir a monitoria?');">
+						  Excluir
+					  </a>
+				  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <th:block th:fragment="scripts">
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </th:block>
+</body>
+</html>

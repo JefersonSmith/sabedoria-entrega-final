@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout (~{::title}, ~{::main}, _, ~{::scripts})}">
+<head>
+  <title>Lista de Mentores</title>
+</head>
+<body>
+  <main>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Foto</th>
+                  <th>Idade</th>
+                  <th>Profissão</th>
+                  <th>CPF</th>
+                  <th>Endereço</th>
+                  <th>Email</th>
+                  <th>Ações</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="mentor : ${mentors}">
+                  <td th:text="${mentor.id}"></td>
+                  <td th:text="${mentor.nome}"></td>
+				  <td>
+					<img alt="Image" class="img_prod" height="70px" width="50px"
+					th:src="|/imagemMentor/${mentor.id}|" />
+
+				  </td>                  
+				  <td th:text="${mentor.idade}"></td>
+                  <td th:text="${mentor.profissao}"></td>
+                  <td th:text="${mentor.cpf}"></td>
+                  <td th:text="${mentor.endereco}"></td>
+                  <td th:text="${mentor.email}"></td>
+
+				  <td>
+					  <a th:href="@{/{id}/editarMentor (id=${mentor.id})}" class="btn btn-warning">
+						  Editar
+					  </a>
+					  <a th:href="@{/mentor/{id}/excluir (id=${mentor.id})}" class="btn btn-danger"
+						  onclick="return confirm('Tem certeza que deseja excluir o mentor?');">
+						  Excluir
+					  </a>
+					</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <th:block th:fragment="scripts">
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </th:block>
+</body>
+</html>
