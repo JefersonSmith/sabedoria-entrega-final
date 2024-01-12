@@ -168,18 +168,30 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    justify-content: center; 
     padding: 0px 4px;
     text-align: center;
+}
+
+div.container-1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FFE7F4;;
+    border-radius: 10px;
+}
+
+div.container-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .texto-inicio {
 	justify-content: center;
 	text-align: center;
 	margin:70px;
-
-
-
 }
 
 #img-home {
