@@ -18,6 +18,11 @@ h2.titulo{
     padding: 30px;
 }
 
+h3 {
+	margin: auto;
+	padding: 20px;
+}
+
 .titulo_img {
     position: absolute;
     margin-top: 50%;
@@ -27,9 +32,21 @@ h2.titulo{
     font-weight: bolder;    
 }
 
-.depoimentos{
+.depoimentos {
     background-color: #FFE7F4;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.depoimentos img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 20px; /* Ajuste a margem conforme necessário */
+    /* Adicione outros estilos conforme necessário */
 }
 
 :root {
@@ -345,8 +362,8 @@ h2.titulo{
         line-height: 34px;
         /* 147.826% */
     }
-
     
+   
 
 }
 
