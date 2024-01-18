@@ -133,20 +133,30 @@ h2.titulo{
 
 
 .botao-nav {
-    border: 1px solid;
-    border-radius: 25px;
-    width: 150px;
-    text-align: center;
-    border-color: var(--vermelho);
-    margin-top: 5px;
-
+	border: 1px solid;
+	border-radius: 25px;
+	width: 150px;
+	text-align: center;
+	border-color: var(--vermelho);
+	margin-top: 5px;
+	font-weight: bold;
 }
 
 
 .botao-nav2 {
-    width: 150px;
-    text-align: center;
-    margin-top: 5px;
+	width: 150px;
+	text-align: center;
+	margin-top: 5px;
+	font-weight: bold;
+
+}
+
+.botao-nav2:hover {
+	color: #FF0751;
+}
+
+.botao-nav:hover {
+	color: #FF0751;
 }
 
 .bt-sn{

@@ -19,7 +19,6 @@
 	width: 150px;
 	text-align: center;
 	background-color: transparent;
-
 }
 
 
@@ -111,7 +110,7 @@
 	text-align: center;
 	border-color: var(--vermelho);
 	margin-top: 5px;
-
+	font-weight: bold;
 }
 
 
@@ -119,6 +118,16 @@
 	width: 150px;
 	text-align: center;
 	margin-top: 5px;
+	font-weight: bold;
+
+}
+
+.botao-nav2:hover {
+	color: #FF0751;
+}
+
+.botao-nav:hover {
+	color: #FF0751;
 }
 
 .bt-sn {
@@ -166,32 +175,33 @@
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 0px 4px;
-    text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 4px;
+	text-align: center;
 }
 
 div.container-1 {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #FFE7F4;;
-    border-radius: 10px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+	background-color: #FFE7F4;
+	;
+	border-radius: 10px;
 }
 
 div.container-2 {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 10px;
 }
 
 .texto-inicio {
 	justify-content: center;
 	text-align: center;
-	margin:70px;
+	margin: 70px;
 }
 
 #img-home {
@@ -343,8 +353,8 @@ div.container-2 {
 	.card-img-top2 {
 		width: 100%;
 	}
-	
-	
+
+
 
 
 }
