@@ -51,10 +51,10 @@ public class MonitoriaController {
 
     @PostMapping("/cadastrarMonitoria")
     public ModelAndView cadastrarMonitoria(@ModelAttribute Monitoria monitoria,
-                                           @RequestParam("mentorId") Long mentorId,
-                                           @RequestParam("clienteId") Long clienteId,
-                                           @RequestParam("dataHora") String dataHora,
-                                           @RequestParam(value = "file", required = false) MultipartFile file) throws IOException {
+                                           @RequestParam Long mentorId,
+                                           @RequestParam Long clienteId,
+                                           @RequestParam String dataHora,
+                                           @RequestParam(required = false) MultipartFile file) throws IOException {
         monitoriaService.salvarMonitoria(monitoria, mentorId, clienteId, dataHora, file);
 
         return new ModelAndView("redirect:/listarMonitorias");
@@ -71,7 +71,7 @@ public class MonitoriaController {
     }
 
     @GetMapping("/excluirMonitoria")
-    public ModelAndView excluirMonitoria(@RequestParam("id") Long id) {
+    public ModelAndView excluirMonitoria(@RequestParam Long id) {
         ModelAndView modelAndView = new ModelAndView("redirect:/listarMonitorias");
 
         // Verificando se a monitoria existe antes de tentar excluí-la

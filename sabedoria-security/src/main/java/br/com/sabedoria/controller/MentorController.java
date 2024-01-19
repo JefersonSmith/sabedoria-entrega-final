@@ -23,6 +23,16 @@ public class MentorController {
     @Autowired
     private MentorService mentorService;
 
+     @GetMapping("/listarMonitores")
+    public ModelAndView listarMonitores() {
+        ModelAndView modelAndView = new ModelAndView("listarMonitores");
+
+        List<Mentor> mentores = mentorService.listarMentores();
+        modelAndView.addObject("mentores", mentores);
+
+        return modelAndView;
+    }
+
     @GetMapping("/cadastrarMentor")
     public ModelAndView cadastrarMentor() {
         ModelAndView modelAndView = new ModelAndView("cadastrarMentor");
@@ -43,7 +53,7 @@ public class MentorController {
 
     @GetMapping("/imagemMentor/{id}")
     @ResponseBody
-    public byte[] exibirImagenMentor(@PathVariable("id") Long id) {
+    public byte[] exibirImagenMentor(@PathVariable Long id) {
         return mentorService.obterImagemMentor(id);
     }
 

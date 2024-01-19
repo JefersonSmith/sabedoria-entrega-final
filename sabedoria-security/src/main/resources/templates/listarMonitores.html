@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="../style/cadastramonitoria.css">
+<link rel="stylesheet" href="../style/navbar.css">
+
+    <title>Listagem de Monitores Disponiveis</title>
+</head>
+
+<body>
+	<nav class="custom-navbar navbar-light bg-light">
+    <div class="custom-container justify-content-between align-items-center">
+        <div class="user-info d-flex align-items-center">
+            <img src="https://img.freepik.com/fotos-gratis/estilo-de-vida-beleza-e-moda-conceito-de-emocoes-de-pessoas-jovem-gerente-de-escritorio-feminino-asiatico-ceo-com-expressao-satisfeita-em-pe-sobre-um-fundo-branco-sorrindo-com-os-bracos-cruzados-sobre-o-peito_1258-59329.jpg" alt="mentorado" class="custom-user-photo">
+            <span class="custom-user-name">Nome do Usuário</span>
+        </div>
+
+        <div class="custom-navbar-links">
+            <a class="custom-navbar-brand  botao-nav" href="/listarMonitorias">Mentorias</a>
+            <a class="custom-navbar-brand  botao-nav" href="/">Sair</a>
+        </div>
+    </div>
+</nav>
+	
+	
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="mt-4 mb-4">Listagem de Mentores</h1>
+            </div>
+        </div>
+
+<div class="card-deck">
+    <div th:each="mentor : ${mentores}" class="card">
+        <div class="card mb-4 shadow-sm">
+           <div class="row no-gutters">
+    <div class="col-md-4 d-flex align-items-center">
+   
+        <img th:src="|/imagemMentor/${mentor.id}|" class="card-img rounded-circle" alt="Imagem do Mentor">
+         <div class="info-monitor">
+        <h5 class="card-title" th:text="${mentor.nome}">Nome do Mentor</h5> 
+        <p th:text="${mentor.profissao}"></p>
+    </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card-body text-center">
+            <p class="card-text">
+                Nesse campo uma pequena scrição ou apresentação do mentor
+            </p>
+            
+            <a th:href="@{'/cadastrarMonitoria'}" class="btn btn-primary btn-secondary">
+                Cadastrar Monitoria
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+    </main>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        
+</body>
+
+</html>

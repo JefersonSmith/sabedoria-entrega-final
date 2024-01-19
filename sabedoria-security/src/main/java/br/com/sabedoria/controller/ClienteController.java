@@ -44,7 +44,7 @@ public class ClienteController {
 
     @GetMapping("/imagem/{id}")
     @ResponseBody
-    public byte[] exibirImagen(@PathVariable("id") Long id) {
+    public byte[] exibirImagen(@PathVariable Long id) {
         return clienteService.obterImagemCliente(id);
     }
 
