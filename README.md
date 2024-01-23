@@ -45,7 +45,6 @@ git clone https://github.com/seu-usuario/sabedoria-plus.git
 
 
 
-Deixe claro como a pessoa pode confirmar que a aplicação está rodando da forma correta. Pode ser com prints ou a mensagem que ela deve esperar.
 
 
 ## 📌 (Sabedoria+) - Informações importantes sobre a aplicação  📌
