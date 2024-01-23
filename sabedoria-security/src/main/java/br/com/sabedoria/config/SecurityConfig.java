@@ -24,14 +24,14 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	    http.csrf(csrf -> csrf.disable())
 	            .authorizeHttpRequests((authorize) -> authorize
-	                    .requestMatchers("/", "/planos.html" ,"/sobreNos.html", "/planos.html", "/mentores.html", "/login.html", "/cadastro.html", "/cadastrarMentor", "/cadastrarMentorado", "/sucesso", "/style/**", "/img/**", "/video/**", "/adminlte/**", "/dist/**", "/plugins/**", "/script/**" )
+	                    .requestMatchers("/", "/planos" ,"/sobreNos", "/planos", "/mentores", "/login", "/cadastro", "/cadastrarMentor", "/cadastrarMentorado", "/sucesso", "/style/**", "/img/**", "/video/**", "/adminlte/**", "/dist/**", "/plugins/**", "/script/**" )
 	                            .permitAll()
-	                    .requestMatchers("/listar", "/teste", "/listarMentor", "/teste", "/mentor/{id}/excluir", "/{id}/editarMentor", "/imagemMentor/{id}", "/imagem/{id}","/{id}/editar", "/{id}/excluir", "/cadastrarMonitoria", "/listarMonitorias", "/excluirMonitoria")
+	                    .requestMatchers("/listar", "/perfil", "/listarMentor", "/teste", "/mentor/{id}/excluir", "/{id}/editarMentor", "/imagemMentor/{id}", "/imagem/{id}","/{id}/editar", "/{id}/excluir", "/cadastrarMonitoria", "/listarMonitorias", "/excluirMonitoria")
 	                            .hasAnyAuthority("CLIENTE", "MENTOR")) // Adicionando "MENTOR" à lista de autoridades permitidas
 	            .formLogin(form -> form
 	            	    .loginPage("/login")
 	            	    .loginProcessingUrl("/login")
-	            	    .defaultSuccessUrl("/teste")
+	            	    .defaultSuccessUrl("/perfil")
 	            	    .permitAll())
 	            .logout(logout -> logout.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll());
 

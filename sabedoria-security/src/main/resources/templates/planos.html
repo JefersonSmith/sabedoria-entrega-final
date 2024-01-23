@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 	<meta charset="UTF-8" />
@@ -34,16 +34,24 @@
 						<a class="nav-link botao-nav2"  aria-current="page" href="/">Início</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2 " href="sobreNos.html">Sobre Nós</a>
+						<a class="nav-link botao-nav2 " href="/sobreNos">Sobre Nós</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2  cor-vermelho" href="planos.html">Planos</a>
+						<a class="nav-link botao-nav2  cor-vermelho" href="/planos">Planos</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav" href="mentores.html">Mentores</a>
+						<a class="nav-link botao-nav" href="/mentores">Mentores</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav" href="/login">Login</a>
+						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
+						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
+							<!-- Se autenticado, exibe o botão de logout -->
+							<a class="nav-link botao-nav" href="/perfil" th:text="${#authentication.principal.nome}"></a>
+						</th:block>
+						<th:block th:unless="${#authorization.expression('isAuthenticated')}">
+							<!-- Se não autenticado, exibe o botão de login -->
+							<a class="nav-link botao-nav" href="/login">Login</a>
+						</th:block>
 					</li>
 
 				</ul>

@@ -71,6 +71,9 @@ public class MentorController {
 
     @PostMapping("/{id}/editarMentor")
     public ModelAndView editarMentor(Mentor mentor, @RequestParam("fileMentor") MultipartFile file) throws IOException {
+        String senhaEncriptada = mentorService.encriptarSenha(mentor.getSenha());
+        mentor.setSenha(senhaEncriptada);
+
         mentorService.salvarMentor(mentor, file);
         ModelAndView modelAndView = new ModelAndView("redirect:/listarMentor");
 

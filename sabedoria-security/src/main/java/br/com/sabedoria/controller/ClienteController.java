@@ -63,7 +63,11 @@ public class ClienteController {
 
     @PostMapping("/{id}/editar")
     public ModelAndView editar(Cliente cliente, @RequestParam("fileCliente") MultipartFile file) throws IOException {
-        clienteService.salvarCliente(cliente, file);
+        String senhaEncriptada = clienteService.encriptarSenha(cliente.getSenha());
+        cliente.setSenha(senhaEncriptada);
+        
+    	
+    	clienteService.salvarCliente(cliente, file);
         ModelAndView modelAndView = new ModelAndView("redirect:/listar");
 
         return modelAndView;

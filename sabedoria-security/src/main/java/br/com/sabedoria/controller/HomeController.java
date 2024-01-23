@@ -20,6 +20,26 @@ public class HomeController {
     public String index() {
         return "index";
     }
+    
+    @GetMapping("/sobreNos")
+    public String sobreNos() {
+        return "sobreNos";
+    }
+    
+    @GetMapping("/planos")
+    public String planos() {
+        return "planos";
+    }
+    
+    @GetMapping("/mentores")
+    public String mentores() {
+        return "mentores";
+    }
+    
+    @GetMapping("/cadastro")
+    public String cadastro() {
+        return "cadastro";
+    }
 
     @GetMapping("/sucesso")
     public String sucesso() {
@@ -31,9 +51,9 @@ public class HomeController {
 		return "/login/login";
 	}
 	
-	@GetMapping("/teste")
-	public String teste() {
-		return "/teste";
+	@GetMapping("/perfil")
+	public String perfil() {
+		return "/perfil";
 	}
 }
 

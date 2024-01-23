@@ -4,15 +4,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sobre Nós</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link href="fontawesome/css/all.css" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/f856e72d95.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/sobrenos.css">
+	<script src="https://kit.fontawesome.com/f856e72d95.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -34,19 +36,27 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2"  aria-current="page" href="/">Início</a>
+						<a class="nav-link botao-nav2" aria-current="page" href="/">Início</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2 cor-vermelho" href="sobreNos.html">Sobre Nós</a>
+						<a class="nav-link botao-nav2 cor-vermelho" href="/sobreNos">Sobre Nós</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2" href="planos.html">Planos</a>
+						<a class="nav-link botao-nav2" href="/planos">Planos</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav" href="mentores.html">Mentores</a>
+						<a class="nav-link botao-nav" href="/mentores">Mentores</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav" href="/login">Login</a>
+						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
+						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
+							<!-- Se autenticado, exibe o botão de logout -->
+							<a class="nav-link botao-nav" href="/perfil" th:text="${#authentication.principal.nome}"></a>
+						</th:block>
+						<th:block th:unless="${#authorization.expression('isAuthenticated')}">
+							<!-- Se não autenticado, exibe o botão de login -->
+							<a class="nav-link botao-nav" href="/login">Login</a>
+						</th:block>
 					</li>
 
 				</ul>
