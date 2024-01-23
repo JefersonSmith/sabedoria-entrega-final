@@ -35,7 +35,7 @@ public class MentorController {
 
     @GetMapping("/cadastrarMentor")
     public ModelAndView cadastrarMentor() {
-        ModelAndView modelAndView = new ModelAndView("cadastrarMentor");
+        ModelAndView modelAndView = new ModelAndView("mentor/cadastrarMentor");
 
         modelAndView.addObject("mentor", new Mentor());
 
@@ -46,11 +46,13 @@ public class MentorController {
     public ModelAndView cadastrarMentor(Mentor mentor, @RequestParam("fileMentor") MultipartFile file) throws IOException {
         ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
 
+        String senhaEncriptada = mentorService.encriptarSenha(mentor.getSenha());
+        mentor.setSenha(senhaEncriptada);
+
         mentorService.salvarMentor(mentor, file);
 
         return modelAndView;
     }
-
     @GetMapping("/imagemMentor/{id}")
     @ResponseBody
     public byte[] exibirImagenMentor(@PathVariable Long id) {
@@ -59,7 +61,7 @@ public class MentorController {
 
     @GetMapping("/{id}/editarMentor")
     public ModelAndView editarMentor(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("edicaoMentor");
+        ModelAndView modelAndView = new ModelAndView("mentor/edicaoMentor");
 
         Mentor mentor = mentorService.obterMentorPorId(id);
         modelAndView.addObject("mentor", mentor);

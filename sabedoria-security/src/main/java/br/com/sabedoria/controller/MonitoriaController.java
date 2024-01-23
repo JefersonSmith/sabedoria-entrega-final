@@ -37,7 +37,7 @@ public class MonitoriaController {
 
     @GetMapping("/cadastrarMonitoria")
     public ModelAndView cadastrarMonitoria() {
-        ModelAndView modelAndView = new ModelAndView("cadastrarMonitoria");
+        ModelAndView modelAndView = new ModelAndView("monitoria/cadastrarMonitoria");
 
         List<Mentor> mentores = mentorRepository.findAll();
         List<Cliente> clientes = clienteRepository.findAll();

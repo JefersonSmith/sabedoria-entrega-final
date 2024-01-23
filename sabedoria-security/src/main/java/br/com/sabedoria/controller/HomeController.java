@@ -25,7 +25,17 @@ public class HomeController {
     public String sucesso() {
         return "sucesso";
     }
+    
+	@GetMapping("/login")
+	public String login() {
+		return "/login/login";
+	}
+	
+	@GetMapping("/teste")
+	public String teste() {
+		return "/teste";
+	}
+}
 
     	
 
-}

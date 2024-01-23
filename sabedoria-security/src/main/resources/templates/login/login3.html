@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+
+</head>
+
+<body class="bgLogin">
+
+	<main>
+		<section class="area-login">
+			<div class="login shadow">
+
+				<div class="d-flex align-items-center gap-2 mt-2 mb-4">
+					<a href="/"><img src="/img/logo.png" height="60" width="60"></a>
+					<h2 class="loginLogo">JobTeens</h2>
+				</div>
+
+				<h6 class="text-white text-start">Olá seja bem-vindo(a)!</h6>
+				<p class="textLogin">Para continuar faça login</p>
+				<form th:action="/login" method="post">
+
+					<div class="form-floating mb-3">
+						<input class="form-control" type="email" id="email" name="username" placeholder="email"
+							autofocus />
+						<label for="email"><i class="bi bi-envelope-at"></i> Endereço de Email</label>
+					</div>
+
+					<div class="form-floating mb-3">
+						<input class="form-control" type="password" id="senha" name="password" placeholder="senha" />
+						<label for="senha"><i class="bi bi-key"></i> Senha</label>
+					</div>
+					<input class="btn btnGroupThree btn-lg" type="submit" value="Entrar" />
+
+				</form>
+				<div th:if="${param.error}" class="mt-4 text-muted">
+					Email ou senha inválidos!</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

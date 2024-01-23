@@ -26,7 +26,7 @@ public class ClienteController {
 
     @GetMapping("/cadastrarMentorado")
     public ModelAndView cadastrarMentorado() {
-        ModelAndView modelAndView = new ModelAndView("cadastrarMentorado");
+        ModelAndView modelAndView = new ModelAndView("/cliente/cadastrarMentorado");
 
         modelAndView.addObject("cliente", new Cliente());
 
@@ -36,7 +36,10 @@ public class ClienteController {
     @PostMapping("/cadastrarMentorado")
     public ModelAndView cadastrarMentorado(Cliente cliente, @RequestParam("fileCliente") MultipartFile file) throws IOException {
         ModelAndView modelAndView = new ModelAndView("redirect:/sucesso");
-
+        
+        String senhaEncriptada = clienteService.encriptarSenha(cliente.getSenha());
+        cliente.setSenha(senhaEncriptada);
+        
         clienteService.salvarCliente(cliente, file);
 
         return modelAndView;
@@ -50,7 +53,7 @@ public class ClienteController {
 
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("edicao");
+        ModelAndView modelAndView = new ModelAndView("cliente/edicao");
 
         Cliente cliente = clienteService.obterClientePorId(id);
         modelAndView.addObject("cliente", cliente);

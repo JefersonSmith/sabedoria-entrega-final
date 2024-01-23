@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,6 +19,9 @@ public class MentorServiceImpl implements MentorService {
 
     @Autowired
     private MentorRepository mentorRepository;
+    
+    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
 
     @Override
     public Mentor salvarMentor(Mentor mentor, MultipartFile file) throws IOException {
@@ -27,6 +32,11 @@ public class MentorServiceImpl implements MentorService {
         }
 
         return mentorRepository.save(mentor);
+    }
+    
+    @Override
+    public String encriptarSenha(String senha) {
+        return passwordEncoder.encode(senha);
     }
 
     @Override

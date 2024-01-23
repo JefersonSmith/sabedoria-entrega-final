@@ -1,8 +1,11 @@
 package br.com.sabedoria.model;
 
 
+import br.com.sabedoria.enums.Perfil;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,6 +40,10 @@ public class Mentor {
     @Column(nullable = false)
     private String senha;
     
+	@Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	private Perfil perfil;
+    
 	@Column(columnDefinition = "longblob")
 	private byte[] imagem;
     
@@ -44,7 +51,7 @@ public class Mentor {
     public Mentor() {
     }
 
-    public Mentor(Long id, String nome, Integer idade, String profissao, String cpf, String endereco, String email, String senha) {
+    public Mentor(Long id, String nome, Integer idade, String profissao, String cpf, String endereco, String email, String senha, Perfil perfil) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -53,7 +60,8 @@ public class Mentor {
         this.endereco = endereco;
         this.email = email;
         this.senha = senha;        
-        
+        this.perfil = perfil;
+
     }
 
     public Long getId() {
@@ -124,6 +132,16 @@ public class Mentor {
 		this.senha = senha;
 	}
 	
+	
+	
+	public Perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
+	}
+
 	public byte[] getImagem() {
 		return imagem;
 	}

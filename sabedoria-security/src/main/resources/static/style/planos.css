@@ -1,199 +1,201 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: "roboto", sans-serif;
 }
 
-	
+
 section {
-  padding: 100px 0;
-  background-image: url(/img/bg-principal.svg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
+	padding: 100px 0;
+	background-image: url(/img/bg-principal.svg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 1;
 }
 
 section::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgb(128, 255, 255) 0%, rgb(0, 0, 255) 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.85;
-  z-index: -1;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-gradient(linear, left top, right top, from(#4e63d7), to(#76bfe9)) !important;
+	background-image: linear-gradient(to right, #4e63d7 0%, #76bfe9 100%) !important;
+	margin-top: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.85;
+	z-index: -1;
 }
 
 .container8 {
-  width: 100%;
-  max-width: 1400px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 0 15px;
+	width: 100%;
+	max-width: 1400px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .section-intro {
-  padding-bottom: 80px;
+	padding-bottom: 80px;
 }
 
 .section-intro h2 {
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
+	color: #ffffff;
+	font-size: 36px;
+	font-weight: 700;
+	text-align: center;
 }
 
 .section-style {
-  width: 130px;
-  height: 12px;
-  margin: 20px auto 0;
-  position: relative;
+	width: 130px;
+	height: 12px;
+	margin: 20px auto 0;
+	position: relative;
 }
 
 .section-style::before {
-  content: "";
-  width: 80px;
-  height: 1px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 0;
-  left: 0;
+	content: "";
+	width: 80px;
+	height: 1px;
+	background-color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .section-style::after {
-  content: "";
-  width: 80px;
-  height: 1px;
-  background-color: #ffffff;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+	content: "";
+	width: 80px;
+	height: 1px;
+	background-color: #ffffff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 .pricing-table__wrapper {
-  position: relative;
-  padding-top: 300px;
+	position: relative;
+	padding-top: 300px;
 }
 
 .pricing-card8s {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .row8 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .card8 {
-  width: 360px;
-  margin: 20px;
-  background-color: #faf9ff;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(40, 25, 114, 0.1);
-  transition: all 0.3s;
+	width: 360px;
+	margin: 20px;
+	background-color: #faf9ff;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px rgba(40, 25, 114, 0.1);
+	transition: all 0.3s;
 }
 
 .card8 .card8-pricing__header {
-  padding: 40px 10px;
-  border-bottom: 1px solid #ebebeb;
+	padding: 40px 10px;
+	border-bottom: 1px solid #ebebeb;
 }
 
 .card8 .card8-pricing__header h4 {
-  margin-bottom: 5px;
-  color: #1d2441;
-  font-size: 27px;
-  font-weight: 900;
+	margin-bottom: 5px;
+	color: #1d2441;
+	font-size: 27px;
+	font-weight: 900;
 }
 
 .card8 .card8-pricing__header p {
-  margin-bottom: 27px;
-  color: #4e4e4e;
-  font-size: 16px;
+	margin-bottom: 27px;
+	color: #4e4e4e;
+	font-size: 16px;
 }
 
 .card8-pricing__price {
-  font-size: 60px;
+	font-size: 60px;
 }
 
 .card8-pricing__price span {
-  margin-right: 3px;
-  font-size: 40px;
-  position: relative;
-  bottom: 5px;
-  vertical-align: middle;
+	margin-right: 3px;
+	font-size: 40px;
+	position: relative;
+	bottom: 5px;
+	vertical-align: middle;
 }
 
 .card8-pricing__list {
-  padding: 30px 8px;
-  list-style: none;
-  border-bottom: 1px solid #ebebeb;
+	padding: 30px 8px;
+	list-style: none;
+	border-bottom: 1px solid #ebebeb;
 }
 
 .card8-pricing__list li {
-  margin-bottom: 12px;
-  color: #4e4e4e;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.8;
+	margin-bottom: 12px;
+	color: #4e4e4e;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.8;
 }
 
 .card8-pricing__footer {
-  padding: 45px 0;
+	padding: 45px 0;
 }
 
 .card8-pricing__footer .button {
-  padding: 15px 30px;
-  color: #1e1859;
-  background: transparent;
-  font-size: 15px;
-  font-weight: 700;
-  border: 1px solid #dbd9e6;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s;
+	padding: 15px 30px;
+	color: #1e1859;
+	background: transparent;
+	font-size: 15px;
+	font-weight: 700;
+	border: 1px solid #dbd9e6;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all 0.3s;
 }
 
 /* Add hover effect on card8 elements */
 
 .card8:hover {
-  background: #ffffff;
-  box-shadow: 0 20px 25px 5px rgba(33, 20, 106, 0.1);
+	background: #ffffff;
+	box-shadow: 0 20px 25px 5px rgba(33, 20, 106, 0.1);
 }
 
 .card8:hover .card8-pricing__header h4,
 .card8:hover .card8-pricing__header p,
 .card8:hover .card8-pricing__price {
-  color: #2b0076;
+	color: #2b0076;
 }
 
 .card8:hover .card8-pricing__footer .button {
-  color: #faf9ff;
-  background: rgb(30, 145, 238)
+	color: #faf9ff;
+	background: rgb(30, 145, 238)
 }
 
 /* Write the media query to make responsive */
 
 @media screen and (max-width: 1200px) {
-  .pricing-table__wrapper {
-    padding-top: 0px;
-  }
+	.pricing-table__wrapper {
+		padding-top: 0px;
+	}
 
-  .pricing-card8s {
-    position: static;
-  }
+	.pricing-card8s {
+		position: static;
+	}
 }

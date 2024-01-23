@@ -13,4 +13,5 @@ public interface MentorService {
     List<Mentor> listarMentores();
     Mentor obterMentorPorId(Long id);
     void excluirMentor(Long id);
+	String encriptarSenha(String senha);
 }

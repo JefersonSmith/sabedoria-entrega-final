@@ -13,4 +13,6 @@ public interface ClienteService {
     List<Cliente> listarClientes();
     Cliente obterClientePorId(Long id);
     void excluirCliente(Long id);
+	String encriptarSenha(String senha);
+
 }
