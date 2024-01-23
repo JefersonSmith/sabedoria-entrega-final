@@ -1,8 +1,8 @@
-body{
-    margin-top:20px;
-    color: #1a202c;
-    text-align: left;
-    background-color: #e2e8f0;    
+.bg-principal {
+	background-image: url(/img/bg-principal.svg);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 60%;
 }
 .main-body {
     padding: 15px;
@@ -27,13 +27,16 @@ body{
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1rem;
+    background-color: rgb(255, 230, 255);
 }
 
 .img-user {
-    width: 100px;  /* ajuste conforme necessário */
-    height: auto;  /* mantém a proporção original da imagem */
+    width: 150px;  /* ajuste conforme necessário */
+    height: 150px; /* define a altura para garantir uma forma de círculo */
+    object-fit: cover; /* mantém a proporção original da imagem e cobre a área especificada */
+    border-radius: 50%; /* cria um efeito de círculo */
+    display: block; /* remove espaçamento extra abaixo da imagem */
 }
-
 
 .gutters-sm {
     margin-right: -8px;
@@ -56,4 +59,13 @@ body{
 }
 .shadow-none {
     box-shadow: none!important;
+}
+
+
+.picture img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	transform: scale(1);
+	transition: all 0.9s ease 0s;
 }
