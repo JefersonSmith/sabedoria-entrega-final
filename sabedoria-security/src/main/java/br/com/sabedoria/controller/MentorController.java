@@ -75,7 +75,7 @@ public class MentorController {
         mentor.setSenha(senhaEncriptada);
 
         mentorService.salvarMentor(mentor, file);
-        ModelAndView modelAndView = new ModelAndView("redirect:/listarMentor");
+        ModelAndView modelAndView = new ModelAndView("redirect:/perfil");
 
         return modelAndView;
     }

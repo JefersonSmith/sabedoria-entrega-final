@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head >
+<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,6 @@
 		<hr class="mt-0 mb-4">
 		<div class="row">
 			<div class="col-xl-4">
-				<!-- Profile picture card-->
 				<div class="card mb-4 mb-xl-0">
 					<div class="card-header">FOTO DO PERFIL</div>
 					<div class="card-body text-center">
@@ -38,60 +37,53 @@
 				</div>
 			</div>
 			<div class="col-xl-8">
-				<!-- Account details card-->
 				<div class="card mb-4">
 					<div class="card-header">Detalhes do Usuário</div>
 					<div class="card-body">
 						<form method="POST" th:object="${mentor}" enctype="multipart/form-data">
-							<!-- Form Group (username)-->
 							<div class="mb-3">
 								<label class="small mb-1" for="inputUsername">Nome (Como seu nome irá aparecer no
 									site)</label>
 								<input type="text" class="form-control" id="nome" th:field="*{nome}">
 							</div>
-							<!-- Form Row-->
 							<div class="row gx-3 mb-3">
-								<!-- Form Group (first name)-->
 								<div class="col-md-6">
 									<label class="small mb-1" for="inputFirstName">Idade</label>
 									<input type="text" class="form-control" id="idade" th:field="*{idade}">
 
 								</div>
-								<!-- Form Group (last name)-->
 								<div class="col-md-6">
 									<label class="small mb-1" for="inputLastName">Profissão</label>
 									<input type="text" class="form-control" id="marca" th:field="*{profissao}">
 
 								</div>
 							</div>
-							<!-- Form Row        -->
 							<div class="row gx-3 mb-3">
-								<!-- Form Group (organization name)-->
 								<div class="col-md-6">
 									<label class="small mb-1" for="inputOrgName">CPF</label>
 									<input type="text" class="form-control" id="cpf" th:field="*{cpf}">
 
 								</div>
-								<!-- Form Group (location)-->
 								<div class="col-md-6">
 									<label class="small mb-1" for="inputLocation">Endereço</label>
 									<input type="text" class="form-control" id="endereco" th:field="*{endereco}">
 								</div>
 							</div>
-							<!-- Form Group (email address)-->
 							<div class="mb-3">
 								<label class="small mb-1" for="inputEmailAddress">Email</label>
 								<input type="text" class="form-control" id="email" th:field="*{email}">
-
 							</div>
-							<!-- Form Row-->
-							<div class="row gx-3 mb-3">
+							<div class="mb-3">
+								<label class="small mb-1" for="inputDescription">Descrição</label>
+								<textarea class="form-control" id="descricao" th:field="*{descricao}"
+									rows="4"></textarea>
+							</div>
 
-								<!-- Form Group (birthday)-->
+							<div class="row gx-3 mb-3">
 								<div class="col-md-6">
 									<label class="small mb-1" for="inputBirthday">Senha</label>
-									<input type="password" class="form-control" id="senha" th:field="*{senha}" placeholder="Você pode alterar sua senha aqui">
-
+									<input type="password" class="form-control" id="senha" th:field="*{senha}"
+										placeholder="Você pode alterar sua senha aqui">
 								</div>
 								<div class="form-group">
 									<label for="imagem">Foto do Usuário</label>
@@ -102,7 +94,6 @@
 							<div class="mb-3">
 								<input type="hidden" id="perfil" name="perfil" value="MENTOR">
 							</div>
-							<!-- Save changes button-->
 							<button type="submit" class="btn btn-primary">Salvar</button>
 						</form>
 					</div>

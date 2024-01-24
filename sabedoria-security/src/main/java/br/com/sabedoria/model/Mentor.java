@@ -27,31 +27,33 @@ public class Mentor {
 
     @Column(nullable = false)
     private String profissao;
-    
+
     @Column(nullable = false)
     private String cpf;
-    
+
     @Column(nullable = false)
     private String endereco;
-    
+
     @Column(nullable = false)
     private String email;
-    
+
     @Column(nullable = false)
     private String senha;
-    
-	@Column(nullable = false)
-	@Enumerated(EnumType.STRING)
-	private Perfil perfil;
-    
-	@Column(columnDefinition = "longblob")
-	private byte[] imagem;
-    
+
+    @Column
+    private String descricao;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Perfil perfil;
+
+    @Column(columnDefinition = "longblob")
+    private byte[] imagem;
 
     public Mentor() {
     }
 
-    public Mentor(Long id, String nome, Integer idade, String profissao, String cpf, String endereco, String email, String senha, Perfil perfil) {
+    public Mentor(Long id, String nome, Integer idade, String profissao, String cpf, String endereco, String email, String senha, Perfil perfil, String descricao) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -59,9 +61,9 @@ public class Mentor {
         this.cpf = cpf;
         this.endereco = endereco;
         this.email = email;
-        this.senha = senha;        
+        this.senha = senha;
         this.perfil = perfil;
-
+        this.descricao = descricao;
     }
 
     public Long getId() {
@@ -148,6 +150,16 @@ public class Mentor {
 
 	public void setImagem(byte[] imagem) {
 		this.imagem = imagem;
+	}
+	
+	
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	@Override

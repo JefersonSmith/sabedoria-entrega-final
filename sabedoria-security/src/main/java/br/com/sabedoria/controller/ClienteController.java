@@ -68,7 +68,7 @@ public class ClienteController {
         
     	
     	clienteService.salvarCliente(cliente, file);
-        ModelAndView modelAndView = new ModelAndView("redirect:/listar");
+        ModelAndView modelAndView = new ModelAndView("redirect:/perfil");
 
         return modelAndView;
     }

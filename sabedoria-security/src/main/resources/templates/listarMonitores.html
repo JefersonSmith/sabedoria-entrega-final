@@ -65,8 +65,7 @@
 
 						<div class="col-md-8">
 							<div class="card-body text-center">
-								<p class="card-text">
-									Nesse campo uma pequena scrição ou apresentação do mentor
+								<p class="card-text" th:text="${mentor.descricao}">
 								</p>
 
 								<a th:href="@{'/cadastrarMonitoriaUser'}" class="btn btn-primary btn-secondary">
