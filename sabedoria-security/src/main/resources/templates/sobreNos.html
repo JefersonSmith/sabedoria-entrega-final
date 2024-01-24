@@ -51,7 +51,8 @@
 						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
 						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
 							<!-- Se autenticado, exibe o botão de logout -->
-							<a class="nav-link botao-nav" href="/perfil" th:text="${#authentication.principal.nome}"></a>
+							<a class="nav-link botao-nav" href="/perfil"
+								th:text="${#authentication.principal.nome}"></a>
 						</th:block>
 						<th:block th:unless="${#authorization.expression('isAuthenticated')}">
 							<!-- Se não autenticado, exibe o botão de login -->
@@ -85,118 +86,123 @@
 	</section>
 	<h2 class="titulo">Impulsionados pelo saber compartilhado</h2>
 	<!-- Cards Desenvolvedores -->
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Jeferson.png">
+	<section class="bloco1">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Jeferson.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">Jeferson Smith</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">Jeferson Smith</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Emily.png">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Emily.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">Emily Cavalcanti</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">Emily Cavalcanti</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Jonathan.png">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Jonathan.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">Jonathan Nascimento</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">Jonathan Nascimento</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Jonh.png">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Jonh.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">Jonh Caxias</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">Jonh Caxias</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Joao.png">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Joao.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">João Lima</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">João Lima</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="our-team">
-					<div class="picture">
-						<img class="img-fluid" src="img/Jenifer.png">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="our-team">
+						<div class="picture">
+							<img class="img-fluid" src="img/Jenifer.png">
+						</div>
+						<div class="team-content">
+							<h3 class="name">Jenifer Penha</h3>
+							<h4 class="title">Desenvolvedor Full Stack</h4>
+						</div>
+						<ul class="social">
+							<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
+							<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+						</ul>
 					</div>
-					<div class="team-content">
-						<h3 class="name">Jenifer Penha</h3>
-						<h4 class="title">Desenvolvedor Full Stack</h4>
-					</div>
-					<ul class="social">
-						<li><a href="#" class="fa fa-facebook" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-twitter" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-google-plus" aria-hidden="true"></a></li>
-						<li><a href="#" class="fa fa-linkedin" aria-hidden="true"></a></li>
-					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Fim dos Cards -->
+		<!-- Fim dos Cards -->
+	</section>
+
 
 
 	<!-- Rodapé -->
 	<footer class="rodape">
-		<p class="card-text py-3">2023 <i class="bi bi-c-circle"></i> Desenvolvido pelo Squad 20 | Projeto fictício
+		<p class="card-text py-3">2023 <i class="bi bi-c-circle"></i> Desenvolvido pelo Squad 20 | Projeto
+			fictício
 			para Recode Pro 2023.</p>
 		<DIV>
 			<img src="img/icons8-whatsapp-48 (1).png" alt="whatsApp">

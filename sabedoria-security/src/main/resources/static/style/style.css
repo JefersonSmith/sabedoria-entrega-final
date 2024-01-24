@@ -18,6 +18,10 @@ main {
 	background-size: 60%;
 }
 
+.divisao1 {
+	background-color: rgb(223, 223, 223);
+}
+
 .botao {
 	border-radius: 25px;
 	border: 2px solid var(--vermelho);
@@ -83,6 +87,11 @@ main {
 
 .mapa {
 	height: 815px;
+}
+
+.img-dados{
+	width: 5rem;
+	height: 5rem;
 }
 
 
@@ -381,24 +390,24 @@ div.container-2 {
 }
 
 
-.rodape {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	background-color: #FFE7F4;
-	margin-top: 70PX;
-	color: black;
-	bottom: 0;
-	width: 100%;
-}
+/*.rodape {*/
+/*	display: flex;*/
+/*	justify-content: space-around;*/
+/*	align-items: center;*/
+/*	background-color: #FFE7F4;*/
+/*	margin-top: 70PX;*/
+/*	color: black;*/
+/*	bottom: 0;*/
+/*	width: 100%;*/
+/*}*/
 
-.rodape p {
-	margin-left: 15px;
-}
+/*.rodape p {*/
+/*	margin-left: 15px;*/
+/*}*/
 
-.rodape img {
-	cursor: pointer;
-}
+/*.rodape img {*/
+/*	cursor: pointer;*/
+/*}*/
 
 
 /* efeito de escrever */

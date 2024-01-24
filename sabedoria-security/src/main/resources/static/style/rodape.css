@@ -1,0 +1,23 @@
+#footer-grande{
+    background: #ed9499;
+    margin-bottom: 0px;
+}
+ 
+#text-rodape{
+    text-align: justify;
+    word-spacing: 2px;
+}
+#card-footer{
+    background: #72d0ef;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+#icones{
+    height: 1.6 rem;
+    padding: 0 .2rem 0.2rem 2rem;
+}
+#rodape{
+    background: #f2bfda;;
+    justify-content: center;
+}
