@@ -121,6 +121,7 @@
 		7px 7px 20px 0px rgba(0, 0, 0, .1),
 		4px 4px 5px 0px rgba(0, 0, 0, .1);
 	outline: none;
+	padding: 0.5rem;
 }
 
 .btn-3 {
