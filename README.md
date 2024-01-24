@@ -10,7 +10,6 @@ LINK DO SITE
 
 Liste as tecnologias (linguagens, ferramentas, bibliotecas) que você utilizou para elaborar o projeto. Essa parte é importante para quando um recrutador (que não tem conhecimento de programação) acessar o seu projeto, ele vai saber só olhando a documentação quais tecnologias você já conhece!
 
-Exemplo:
 * [Java Spring](https://spring.io/)
 * [MySQL](https://www.mysql.com/)
 * [Thymeleaf](https://www.thymeleaf.org/)
@@ -46,7 +45,6 @@ git clone https://github.com/seu-usuario/sabedoria-plus.git
 
 
 
-Deixe claro como a pessoa pode confirmar que a aplicação está rodando da forma correta. Pode ser com prints ou a mensagem que ela deve esperar.
 
 
 ## 📌 (Sabedoria+) - Informações importantes sobre a aplicação  📌
