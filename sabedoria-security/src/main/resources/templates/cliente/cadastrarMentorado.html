@@ -51,53 +51,50 @@
   </nav>
   <!-- fim navbar -->
   
-  <main>
+    <main>
         <h3 class="text-center">Cadastro de mentorado</h3>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    
-                    
-                    
-				<form method="POST" th:object="${cliente}" enctype="multipart/form-data">
+                    <form method="POST" th:object="${cliente}" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome completo</label>
-                            <input name="nome" maxlength="40" type="text" class="form-control" id="nome">
+                            <input name="nome" maxlength="40" type="text" class="form-control" id="nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="idade" class="form-label">Idade</label>
-                            <input name="idade" type="number" class="form-control" id="idade">
+                            <input name="idade" type="number" class="form-control" id="idade" required>
                         </div>
                         <div class="mb-3">
                             <label for="profissao" class="form-label">Profissão</label>
-                            <input name="profissao" type="text" class="form-control" id="profissao">
+                            <input name="profissao" type="text" class="form-control" id="profissao" required>
                         </div>
                         <div class="mb-3">
                             <label for="cpf" class="form-label">CPF (apenas números)</label>
-                            <input name="cpf" maxlength="11" type="text" class="form-control" id="cpf">
+                            <input name="cpf" maxlength="11" type="text" class="form-control" id="cpf" required>
                         </div>
                         <div class="mb-3">
                             <label for="endereco" class="form-label">Endereço</label>
-                            <input name="endereco" type="text" class="form-control" id="endereco">
+                            <input name="endereco" type="text" class="form-control" id="endereco" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input name="email" type="email" class="form-control" id="email">
+                            <input name="email" type="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="senha" class="form-label">Senha</label>
-                            <input name="senha" type="password" class="form-control" id="senha">
+                            <input name="senha" type="password" class="form-control" id="senha" required>
                         </div>
                         <div class="mb-3">
                             <label for="imagem" class="form-label">Imagem de perfil</label>
-                            <input name="fileCliente" type="file" class="form-control" id="imagem">
+                            <input name="fileCliente" type="file" class="form-control" id="imagem" required>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-primary" type="submit">Cadastrar</button>
                             <button class="btn btn-secondary" type="reset">Limpar Formulário</button>
                         </div>
                         <div class="mb-3">
-							<input type="hidden" id="perfil" name="perfil" value="CLIENTE">
+                            <input type="hidden" id="perfil" name="perfil" value="CLIENTE">
                         </div>
                     </form>
                 </div>
@@ -106,8 +103,7 @@
                 </div>
             </div>
         </div>
-    </main>
-    
+    </main>    
 
     <!-- Rodapé -->
     <footer class="rodape">
