@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Lista de Mentorias</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="../style/navbar.css">
+	
+
+</head>
+
+<body>
+
+
+
+
+
+	<main class="container mt-5">
+		<nav class="custom-navbar navbar-light bg-light">
+			<div class="custom-container justify-content-between align-items-center">
+				<div class="user-info d-flex align-items-center">
+					<img class="custom-user-photo" alt="Imagem do Mentor" sec:authorize="hasAuthority('MENTOR')"
+						th:src="@{'/imagemMentor/' + ${#authentication.principal.id}}" />
+					<img class="custom-user-photo" alt="Imagem do Mentor" sec:authorize="hasAuthority('CLIENTE')"
+						th:src="@{'/imagem/' + ${#authentication.principal.id}}" />
+					<span class="custom-user-name" th:text="${#authentication.principal.nome}"></span>
+				</div>
+
+				<div class="custom-navbar-links row">
+					<div class="col">
+						<a class="nav-link botao-nav" href="/listarMonitores">Agendar</a>
+					</div>
+					<div class="col">
+						<a class="nav-link botao-nav" href="/perfil">Voltar</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<div class="card">
+					<div class="card-header text-center bg-primary text-white">
+						<h3 class="card-title">Mentorias Agendadas</h3>
+					</div>
+					<div class="card-body table-responsive p-0">
+
+
+						<table class="table table-striped table-hover">
+							<thead class="thead-dark">
+								<tr>
+									<th>ID</th>
+									<th>Mentor</th>
+									<th>Cliente</th>
+									<th>Horário</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="monitoria : ${monitorias}"
+									th:if="${monitoria.cliente.id == #authentication.principal.id}">
+									<td th:text="${monitoria.id}"></td>
+									<td th:text="${monitoria.mentor.nome}"></td>
+									<td th:text="${monitoria.cliente.nome}"></td>
+									<td th:text="${#temporals.format(monitoria.horario, 'dd/MM/yyyy HH:mm')}"></td>
+									<td>
+										<a th:href="@{'/excluirMonitoria?id=' + ${monitoria.id}}" class="btn btn-danger"
+											onclick="return confirm('Tem certeza que deseja excluir a monitoria?');">
+											Excluir
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.card-body -->
+				</div>
+			</div>
+		</div>
+	</main>
+	<th:block th:fragment="scripts">
+		<script>
+			$(function () {
+				$('[data-toggle="popover"]').popover()
+			})
+		</script>
+	</th:block>
+</body>
+
+</html>

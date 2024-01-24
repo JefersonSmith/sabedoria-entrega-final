@@ -27,10 +27,12 @@
 }
 
 .botao-nav {
-    border: 1px solid;
-    border-radius: 25px;
-    padding:15px;
-    text-align: center;
+	border: 1px solid;
+	border-radius: 25px;
+	width: 150px;
+	text-align: center;
+	margin-top: 5px;
+	font-weight: bold;
     border-color: #FF0751;
     
 }

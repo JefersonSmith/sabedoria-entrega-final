@@ -24,10 +24,11 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 	    http.csrf(csrf -> csrf.disable())
 	            .authorizeHttpRequests((authorize) -> authorize
-	                    .requestMatchers("/", "/planos" ,"/sobreNos", "/planos", "/mentores", "/login", "/cadastro", "/cadastrarMentor", "/cadastrarMentorado", "/sucesso", "/style/**", "/img/**", "/video/**", "/adminlte/**", "/dist/**", "/plugins/**", "/script/**" )
+	                    .requestMatchers("/", "/planos" ,"/sobreNos", "/planos", "/mentores", "/login", "/cadastro", "/cadastrarMentor", "/cadastrarMentorado", "/sucesso", "/sucessoMonitoria", "/sucessoExclusao", "/style/**", "/img/**", "/video/**", "/adminlte/**", "/dist/**", "/plugins/**", "/script/**" )
 	                            .permitAll()
-	                    .requestMatchers("/listar", "/perfil", "/listarMentor", "/teste", "/mentor/{id}/excluir", "/{id}/editarMentor", "/imagemMentor/{id}", "/imagem/{id}","/{id}/editar", "/{id}/excluir", "/cadastrarMonitoria", "/listarMonitorias", "/excluirMonitoria")
-	                            .hasAnyAuthority("CLIENTE", "MENTOR")) // Adicionando "MENTOR" à lista de autoridades permitidas
+	                    .requestMatchers("/perfil", "/teste", "/{id}/editarMentor", "/imagemMentor/{id}", "/imagem/{id}","/{id}/editar", "/cadastrarMonitoria", "/cadastrarMonitoriaUser", "/listarMonitorias", "/excluirMonitoria", "/listarMonitores", "/monitoriasAgendadas")
+	                            .hasAnyAuthority("CLIENTE", "MENTOR", "ADMIN")
+	                            .requestMatchers("/listar", "/listarMentor", "/mentor/{id}/excluir", "/{id}/excluir").hasAuthority("ADMIN"))
 	            .formLogin(form -> form
 	            	    .loginPage("/login")
 	            	    .loginProcessingUrl("/login")

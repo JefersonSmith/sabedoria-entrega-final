@@ -16,6 +16,11 @@
 
 </head>
 
+							<select name="clienteId" class="form-select" id="cliente" disabled>
+								<option th:value="${#authentication.principal.id}"
+									th:text="${#authentication.principal.nome}"></option>
+							</select>
+
 <body>
 
 	<main>
@@ -28,8 +33,8 @@
 						<div class="mb-3">
 							<label for="cliente" class="form-label">Cliente</label>
 							<select name="clienteId" class="form-select" id="cliente">
-								<option th:each="cliente : ${clientes}" th:value="${cliente.id}"
-									th:text="${cliente.nome}"></option>
+								<option th:value="${#authentication.principal.id}"
+									th:text="${#authentication.principal.nome}"></option>							</select>
 							</select>
 						</div>
 						<div class="mb-3">
@@ -60,5 +65,4 @@
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 		crossorigin="anonymous"></script>
 </body>
-
 </html>

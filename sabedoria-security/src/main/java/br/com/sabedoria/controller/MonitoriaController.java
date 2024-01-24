@@ -57,7 +57,32 @@ public class MonitoriaController {
                                            @RequestParam(required = false) MultipartFile file) throws IOException {
         monitoriaService.salvarMonitoria(monitoria, mentorId, clienteId, dataHora, file);
 
-        return new ModelAndView("redirect:/listarMonitorias");
+        return new ModelAndView("redirect:/sucessoMonitoria");
+    }
+    
+    @GetMapping("/cadastrarMonitoriaUser")
+    public ModelAndView cadastrarMonitoriaUser() {
+        ModelAndView modelAndView = new ModelAndView("monitoria/cadastrarMonitoriaUser");
+
+        List<Mentor> mentores = mentorRepository.findAll();
+        List<Cliente> clientes = clienteRepository.findAll();
+
+        modelAndView.addObject("mentores", mentores);
+        modelAndView.addObject("clientes", clientes);
+        modelAndView.addObject("monitoria", new Monitoria());
+
+        return modelAndView;
+    }
+
+    @PostMapping("/cadastrarMonitoriaUser")
+    public ModelAndView cadastrarMonitoriaUser(@ModelAttribute Monitoria monitoria,
+                                           @RequestParam Long mentorId,
+                                           @RequestParam Long clienteId,
+                                           @RequestParam String dataHora,
+                                           @RequestParam(required = false) MultipartFile file) throws IOException {
+        monitoriaService.salvarMonitoria(monitoria, mentorId, clienteId, dataHora, file);
+
+        return new ModelAndView("redirect:/sucessoMonitoria");
     }
 
     @GetMapping("/listarMonitorias")
@@ -69,10 +94,20 @@ public class MonitoriaController {
 
         return modelAndView;
     }
+    
+    @GetMapping("/monitoriasAgendadas")
+    public ModelAndView monitoriasAgendadas() {
+        ModelAndView modelAndView = new ModelAndView("cliente/monitoriasAgendadas");
+
+        List<Monitoria> monitorias = monitoriaRepository.findAll();
+        modelAndView.addObject("monitorias", monitorias);
+
+        return modelAndView;
+    }
 
     @GetMapping("/excluirMonitoria")
     public ModelAndView excluirMonitoria(@RequestParam Long id) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/listarMonitorias");
+        ModelAndView modelAndView = new ModelAndView("redirect:/sucessoExclusao");
 
         // Verificando se a monitoria existe antes de tentar excluí-la
         if (monitoriaRepository.existsById(id)) {

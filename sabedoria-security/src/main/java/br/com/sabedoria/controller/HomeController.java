@@ -46,6 +46,16 @@ public class HomeController {
         return "sucesso";
     }
     
+    @GetMapping("/sucessoExclusao")
+    public String sucessoExclusao() {
+        return "sucessoExclusao";
+    }
+    
+    @GetMapping("/sucessoMonitoria")
+    public String sucessoMonitoria() {
+        return "sucessoMonitoria";
+    }
+    
 	@GetMapping("/login")
 	public String login() {
 		return "/login/login";
@@ -55,7 +65,9 @@ public class HomeController {
 	public String perfil() {
 		return "/perfil";
 	}
+	
 }
+
 
     	
 
