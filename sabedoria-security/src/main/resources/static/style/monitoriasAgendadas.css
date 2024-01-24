@@ -1,0 +1,29 @@
+.container {
+	margin-top: 2rem;
+}
+
+body {
+    background-image: url(/img/bg-principal.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 60%;
+}
+
+h1 {
+	    color: #FF0751;
+	     -webkit-text-stroke: 2px black;
+	     text-stroke: 2px black;
+	     text-align: center;
+}
+
+tbody {
+	background-color: #FFE7F4;
+}
+
+.card-title {
+    color: #fff; 
+}
+
+.table {
+    margin-top: 20px;
+}

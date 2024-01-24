@@ -3,6 +3,9 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
+.container {
+	margin-top: 2rem;
+}
 .card-body {
     text-align: center;
     padding: 1.25rem;
