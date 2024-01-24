@@ -43,9 +43,6 @@
 						<a class="nav-link botao-nav" href="/mentores">Mentores</a>
 					</li>
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav" href="/login">Login</a>
-					</li>
-					<li class="nav-item me-4">
 						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
 						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
 							<!-- Se autenticado, exibe o botão de logout -->
