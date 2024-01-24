@@ -2,6 +2,11 @@
 	--vermelho: #FF0751;
 }
 
+main {
+	width: 100%;
+	margin: 0 auto;
+}
+
 #nav {
 	margin: 0 100px;
 }
@@ -444,6 +449,12 @@ div.container-2 {
 		font-style: normal;
 		font-weight: 700;
 		line-height: 57px;
+	}
+
+	.text_secundario {
+		text-align: left;
+		padding: 2rem;
+		width: 120%;
 	}
 
 	#p1 {

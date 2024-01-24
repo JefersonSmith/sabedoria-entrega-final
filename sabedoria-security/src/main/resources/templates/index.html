@@ -49,7 +49,8 @@
 						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
 						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
 							<!-- Se autenticado, exibe o botão de logout -->
-							<a class="nav-link botao-nav" href="/perfil" th:text="${#authentication.principal.nome}"></a>
+							<a class="nav-link botao-nav" href="/perfil"
+								th:text="${#authentication.principal.nome}"></a>
 						</th:block>
 						<th:block th:unless="${#authorization.expression('isAuthenticated')}">
 							<!-- Se não autenticado, exibe o botão de login -->
@@ -66,9 +67,10 @@
 
 	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="img/sabedoriaindex4.png" class="d-block w-100" alt="...">
+			<div class="carousel-item active d-flex align-items-center justify-content-center">
+				<img src="img/sabedoriaindex4.png" class="d-block img-fluid" alt="...">
 			</div>
+
 		</div>
 	</div>
 
@@ -84,21 +86,24 @@
 			<div class="col-md-8" id="img-home">
 				<img src="img/fotohome.png" class="img-fluid" alt="senhora cozinhando">
 			</div>
+		</div>
 
-			<div>
-				<h5 class="text_secundario"><strong> <b>Agende uma sessão instantaneamente com um mentor e
-							trabalhe com eles diretamente, seja para conselhos táticos pontuais ou várias
-							sessões para um objetivo de longo prazo </b></strong></h5>
-				<p class="text_secundario">Mentores idosos desempenham um papel vital na transmissão de
-					conhecimento e experiência ao longo das gerações. A sabedoria acumulada, maturidade e
-					perspectiva
-					única oferecem orientação valiosa em diversos aspectos da vida. Ao se conectar com
-					mentores idosos, podemos aprender lições preciosas, preservar tradições culturais e
-					construir relacionamentos enriquecedores. É uma oportunidade de reconhecer e honrar o
-					inestimável legado que os mais velhos têm a compartilhar.
-				</p>
-			</div>
+		<div class="container justify-content-center">
+			<h5 class="text_secundario"><strong> <b>Agende uma sessão instantaneamente com um mentor e
+						trabalhe com eles diretamente, seja para conselhos táticos pontuais ou várias
+						sessões para um objetivo de longo prazo </b></strong></h5>
 
+		</div>
+		<div class="container justify-content-center">
+
+			<p class="text_secundario">Mentores idosos desempenham um papel vital na transmissão de
+				conhecimento e experiência ao longo das gerações. A sabedoria acumulada, maturidade e
+				perspectiva
+				única oferecem orientação valiosa em diversos aspectos da vida. Ao se conectar com
+				mentores idosos, podemos aprender lições preciosas, preservar tradições culturais e
+				construir relacionamentos enriquecedores. É uma oportunidade de reconhecer e honrar o
+				inestimável legado que os mais velhos têm a compartilhar.
+			</p>
 		</div>
 
 		<div class="b-example-divider"></div>
