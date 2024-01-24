@@ -1,3 +1,8 @@
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+
 .card-body {
     text-align: center;
     padding: 1.25rem;
@@ -16,17 +21,17 @@
 .col-md-8 {
 	background: #FFE7F4;
 }
-	body {
-	    background-image: url(/img/bg-principal.svg);
+body {
+    background-image: url(/img/bg-principal.svg);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 60%;
 }
-
 h1 {
 	    color: #FF0751;
 	     -webkit-text-stroke: 2px black;
 	     text-stroke: 2px black;
+	     text-align: center;
 }
 .card-img {
     width: 100px;
@@ -39,6 +44,107 @@ h1 {
 .info-monitor {
 	display: flex;
 	flex-direction: column;
+}
+
+.custom-btn {
+	width: 130px;
+	height: 40px;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 25px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+		7px 7px 20px 0px rgba(0, 0, 0, .1),
+		4px 4px 5px 0px rgba(0, 0, 0, .1);
+	outline: none;
+}
+
+
+.btn-4 {
+	background: #505050; /* Cinza moderno - altere para a cor desejada */
+	width: 150px;
+	height: 40px;
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+
+.btn-4 span {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-4:before,
+.btn-4:after {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 0;
+	background: #333; /* Altere para a cor desejada */
+	transition: all 0.3s ease;
+}
+
+.btn-4:before {
+	height: 0%;
+	width: 2px;
+}
+
+.btn-4:after {
+	width: 0%;
+	height: 2px;
+}
+
+.btn-4:hover {
+	background: transparent;
+	box-shadow: none;
+}
+
+.btn-4:hover:before {
+	height: 100%;
+}
+
+.btn-4:hover:after {
+	width: 100%;
+}
+
+.btn-4 span:hover {
+	color: #333; /* Altere para a cor desejada */
+}
+
+.btn-4 span:before,
+.btn-4 span:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	background: #333; /* Altere para a cor desejada */
+	transition: all 0.3s ease;
+}
+
+.btn-4 span:before {
+	width: 2px;
+	height: 0%;
+}
+
+.btn-4 span:after {
+	width: 0%;
+	height: 2px;
+}
+
+.btn-4 span:hover:before {
+	height: 100%;
+}
+
+.btn-4 span:hover:after {
+	width: 100%;
 }
 
 
