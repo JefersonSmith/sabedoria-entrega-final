@@ -3,7 +3,7 @@ Sabedoria+ é uma plataforma de mentoria inovadora, onde os idosos assumem o pap
 compartilhando suas experiências e sabedoria com a geração mais jovem.
 O projeto visa promover a conexão intergeracional e proporcionar uma troca valiosa de conhecimento.
 
-LINK DO SITE
+LINK DO SITE!
 
 
 ## Tecnologias Utilizadas
