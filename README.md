@@ -23,8 +23,10 @@ Liste as tecnologias (linguagens, ferramentas, bibliotecas) que você utilizou p
 ## Dependências e Versões Necessárias
 
 O projeto foi executado utilizando as seguintes dependências:.
+    spring boot starter security (v6.0.0)
     Spring Boot Starter for Data JPA (v2.6.2)
     Spring Boot Starter for Thymeleaf (v2.6.2)
+    thymeleaf extras springsecurity6
     Spring Boot Starter for Web (v2.6.2)
     Spring Boot DevTools (v2.6.2)
     MySQL Connector (v8.0.23)
