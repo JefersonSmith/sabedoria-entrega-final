@@ -58,12 +58,12 @@ public class HomeController {
     
 	@GetMapping("/login")
 	public String login() {
-		return "/login/login";
+		return "login";
 	}
 	
 	@GetMapping("/perfil")
 	public String perfil() {
-		return "/perfil";
+		return "perfil";
 	}
 	
 }

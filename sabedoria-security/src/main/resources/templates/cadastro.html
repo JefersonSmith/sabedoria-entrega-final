@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -13,7 +14,8 @@
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/cadastro.css">
-	<title>Cadastro</title>
+	<link rel="stylesheet" href="style/rodape.css">
+
 </head>
 
 <body>
@@ -34,10 +36,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item me-4">
-						<a class="nav-link botao-nav2 " aria-current="page" href="/">Início</a>
+						<a class="nav-link botao-nav2" aria-current="page" href="/">Início</a>
 					</li>
 					<li class="nav-item me-4">
 						<a class="nav-link botao-nav2" href="/sobreNos">Sobre Nós</a>
+					</li>
+					<li class="nav-item me-4">
+						<a class="nav-link botao-nav2" href="/planos">Planos</a>
 					</li>
 					<li class="nav-item me-4">
 						<a class="nav-link botao-nav" href="/mentores">Mentores</a>
@@ -46,20 +51,21 @@
 						<!-- Use Thymeleaf para verificar se o usuário está autenticado -->
 						<th:block th:if="${#authorization.expression('isAuthenticated()')}">
 							<!-- Se autenticado, exibe o botão de logout -->
-							<a class="nav-link botao-nav" href="/perfil" th:text="${#authentication.principal.nome}"></a>
+							<a class="nav-link botao-nav" href="/perfil"
+								th:text="${#authentication.principal.nome}"></a>
 						</th:block>
 						<th:block th:unless="${#authorization.expression('isAuthenticated')}">
 							<!-- Se não autenticado, exibe o botão de login -->
 							<a class="nav-link botao-nav" href="/login">Login</a>
 						</th:block>
 					</li>
+
 				</ul>
 
 			</div>
 		</div>
 	</nav>
 	<!-- fim navbar -->
-
 	<main>
 		<div class="titulo-1">
 			<img src="./img/Learn and grow with (1).png" alt="">
@@ -124,16 +130,14 @@
 	</main>
 
 	<!-- Rodapé -->
-	<footer class="rodape">
-		<p class="card-text py-3" id="rodape-color">2023 <i class="bi bi-c-circle"></i> Desenvolvido pelo Squad 20 |
-			Projeto fictício
-			para Recode Pro 2023.</p>
-		<DIV>
-			<img src="img/icons8-whatsapp-48 (1).png" alt="whatsApp">
-			<img src="img/icons8-instagram-48 (1).png" alt="Instagram">
-			<img src="img/icons8-facebook-novo-48.png" alt="facebook">
-		</DIV>
-	</footer>
+	<div class="container-fluid text-white" id="rodape">
+		<div class=" mt-2">
+			<div class="text-center p-3">
+				© Desenvolvido pelo Squad 20 | Projeto fictício
+				para Recode Pro 2023
+			</div>
+		</div>
+	</div>
 
 	<div vw class="enabled">
 		<div vw-access-button class="active"></div>

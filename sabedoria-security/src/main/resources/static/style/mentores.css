@@ -210,11 +210,9 @@ h3 {
     
 .text_secundario {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 1300;
     text-align: justify;
-    width: 140%;
-    margin-left: -5rem;
-    padding-top: 2rem;
+
     color: black;
     
 }
