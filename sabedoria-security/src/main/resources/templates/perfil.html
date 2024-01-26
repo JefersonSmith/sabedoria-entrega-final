@@ -77,10 +77,11 @@
 									<p class="text-muted font-size-sm" th:text="${#authentication.principal.endereco}">
 									</p>
 									<a class="btn btn-primary" sec:authorize="hasAuthority('CLIENTE')"
-										href="/listarMonitores">Mentoria</a>
+										href="/listarMonitores"> Agende sua Mentoria</a>																			</p>
+									<a class="btn btn-secondary"
+										href="/monitoriasAgendadas"> Mentorias Agendadas</a>
 									<a class="btn btn-primary" sec:authorize="hasAuthority('ADMIN')"
 										href="/listar">Admin</a>
-									<button class="btn btn-outline-primary">Mensagem</button>
 								</div>
 							</div>
 						</div>

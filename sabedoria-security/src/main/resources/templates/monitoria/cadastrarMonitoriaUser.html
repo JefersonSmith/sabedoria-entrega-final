@@ -12,16 +12,13 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 	<link rel="stylesheet" href="../style/navbar.css">
-		<link rel="stylesheet" href="../style/paginaAgendarMonitoria.css">
+	<link rel="stylesheet" href="../style/paginaAgendarMonitoria.css">
 	<title>Cadastro de Monitoria</title>
-
-
 </head>
 
-							
+
 
 <body>
-
 	<main class="container">
 		<nav class="custom-navbar navbar-light bg-light">
 			<div class="custom-container justify-content-between align-items-center">
@@ -43,41 +40,40 @@
 				</div>
 			</div>
 		</nav>
-		 <h1 class="titulo-cadastros text-center ">Cadastro de Monitoria</h1>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form method="POST" action="/cadastrarMonitoria" th:object="${monitoria}"
-                        onsubmit="formatarDataParaSpring()">
-                        <div class="mb-3">
-                            <label for="cliente" class="form-label">Cliente</label>
-                            <select name="clienteId" class="form-select" id="cliente">
-                                <option th:value="${#authentication.principal.id}"
-                                    th:text="${#authentication.principal.nome}"></option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mentor" class="form-label">Mentor</label>
-                            <select name="mentorId" class="form-select" id="mentor">
-                                <option th:each="mentor : ${mentores}" th:value="${mentor.id}"
-                                    th:text="${mentor.nome}">
-                                </option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="dataHora" class="form-label">Data e Hora</label>
-                            <input name="dataHora" type="datetime-local" class="form-control" id="dataHora"
-                                pattern="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}" required>
-                        </div>
+		<h1 class="titulo-cadastros text-center ">Cadastro de Mentoria</h1>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<form method="POST" action="/cadastrarMonitoria" th:object="${monitoria}"
+						onsubmit="formatarDataParaSpring()">
+						<div class="mb-3">
+							<label for="cliente" class="form-label">Cliente</label>
+							<select name="clienteId" class="form-select" id="cliente">
+								<option th:value="${#authentication.principal.id}"
+									th:text="${#authentication.principal.nome}"></option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="mentor" class="form-label">Mentor</label>
+							<select name="mentorId" class="form-select" id="mentor">
+								<option th:each="mentor : ${mentores}" th:value="${mentor.id}" th:text="${mentor.nome}">
+								</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="dataHora" class="form-label">Data e Hora</label>
+							<input name="dataHora" type="datetime-local" class="form-control" id="dataHora"
+								pattern="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}" required>
+						</div>
 
-                        <div class="text-center">
-                            <button class="custom-btn btn-3"  type="submit"><span>Cadastrar</span></button>
-                            <button class="custom-btn  btn-4" type="reset"><span>Limpar Formulário</span></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+						<div class="text-center">
+							<button class="custom-btn btn-3" type="submit"><span>Cadastrar</span></button>
+							<button class="custom-btn  btn-4" type="reset"><span>Limpar Formulário</span></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<script src="./script/script.js"></script>
@@ -85,4 +81,5 @@
 		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 		crossorigin="anonymous"></script>
 </body>
+
 </html>

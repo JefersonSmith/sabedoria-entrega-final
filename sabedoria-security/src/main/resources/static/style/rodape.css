@@ -1,14 +1,13 @@
 #footer-grande{
-    background: #ed9499;
+    background: rgb(234, 132, 137);
     margin-bottom: 0px;
 }
  
 #text-rodape{
-    text-align: justify;
-    word-spacing: 2px;
+    text-align: left;
 }
 #card-footer{
-    background: #72d0ef;
+    background: rgb(72, 193, 234);
     height: 100%;
     text-align: center;
     font-size: 22px;
@@ -18,6 +17,6 @@
     padding: 0 .2rem 0.2rem 2rem;
 }
 #rodape{
-    background: #f2bfda;;
+    background: rgb(240, 181, 211);;
     justify-content: center;
 }

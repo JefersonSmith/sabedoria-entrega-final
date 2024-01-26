@@ -71,6 +71,16 @@ main {
 
 }
 
+.redonda {
+	border-radius: 50%;
+	width: 750px;
+	height: auto;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .busca {
 	width: 50px;
 	height: 50px;
@@ -89,7 +99,7 @@ main {
 	height: 815px;
 }
 
-.img-dados{
+.img-dados {
 	width: 5rem;
 	height: 5rem;
 }
@@ -388,6 +398,10 @@ div.container-2 {
 	justify-content: center;
 }
 
+hr {
+	border: 5px solid #333;
+}
+
 
 /*.rodape {*/
 /*	display: flex;*/
@@ -420,6 +434,17 @@ div.container-2 {
 	animation: digitando 3.5s steps(22) infinite alternate, piscando 0.5s infinite step-end alternate;
 }
 
+.fotohomeprincipal {
+	max-width: 70%;
+	height: auto;
+}
+
+.fotohome {
+	max-width: 50%;
+	height: auto;
+}
+
+
 @keyframes digitando {
 	0% {
 		width: 0;
@@ -442,7 +467,13 @@ div.container-2 {
 
 /* fim do efeito de escrever */
 
+@media (max-width: 1100px) {
 
+	.redonda {
+		width: 450px;
+
+	}
+}
 
 @media (max-width: 800px) {
 	.bg-principal {
@@ -460,11 +491,7 @@ div.container-2 {
 		line-height: 57px;
 	}
 
-	.text_secundario {
-		text-align: left;
-		padding: 2rem;
-		width: 120%;
-	}
+
 
 	#p1 {
 		text-align: center;
@@ -487,7 +514,27 @@ div.container-2 {
 		width: 100%;
 	}
 
+	.redonda {
+		width: 250px;
 
+	}
 
+	.fotohomeprincipal {
+		max-width: 100%;
+		height: auto;
+	}
 
+	.fotohome {
+		max-width: 80%;
+		height: auto;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.redonda {
+		width: 180px;
+
+	}
 }
