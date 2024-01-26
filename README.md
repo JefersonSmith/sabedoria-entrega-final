@@ -46,14 +46,6 @@ git clone https://github.com/seu-usuario/sabedoria-plus.git
 -Acesse a aplicação através do navegador, visitando http://localhost:8080.
 
 
-
-## Banco de Dados 📁
-![CONCEITUAL](https://github.com/JefersonSmith/sabedoria-entrega-final/assets/123952270/a98856e2-1cf6-43be-8541-78aeb687ad64)
-
-![LOGICO](https://github.com/JefersonSmith/sabedoria-entrega-final/assets/123952270/a9bd2ac5-0479-4848-a90b-27fd84fb1a2d)
-
-![UML](https://github.com/JefersonSmith/sabedoria-entrega-final/assets/123952270/499b00e9-19be-4a8b-b4f6-b91227205ef4)
-
 ## 📌 (Sabedoria+) - Informações importantes sobre a aplicação  📌
 
    A aplicação permite que os idosos se cadastrem como mentores, compartilhem suas áreas de especialização e se conectem com os aprendizes.
