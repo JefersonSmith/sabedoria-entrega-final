@@ -1,10 +1,14 @@
-# Sabedoria+
+# Sabedoria +
 Sabedoria+ é uma plataforma de mentoria inovadora, onde os idosos assumem o papel de mentores, 
 compartilhando suas experiências e sabedoria com a geração mais jovem.
 O projeto visa promover a conexão intergeracional e proporcionar uma troca valiosa de conhecimento.
 
-LINK DO SITE!
+Link do nosso projeto:
+https://sabedoriamais.azurewebsites.net/
 
+<p align="center">
+  <img alt="Readme Titulo" src="https://github.com/JefersonSmith/sabedoria-entrega-final/assets/123952270/98274221-aaa5-4c0f-a31f-d8b7296eb4cf">
+</p>
 
 ## Tecnologias Utilizadas
 
@@ -46,7 +50,7 @@ git clone https://github.com/seu-usuario/sabedoria-plus.git
 -Acesse a aplicação através do navegador, visitando http://localhost:8080.
 
 
-## 📌 (Sabedoria+) - Informações importantes sobre a aplicação  📌
+## 📌 Sabedoria+ 📌
 
    A aplicação permite que os idosos se cadastrem como mentores, compartilhem suas áreas de especialização e se conectem com os aprendizes.
    Os aprendizes podem procurar mentores com base em interesses específicos e solicitar mentoria.
