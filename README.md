@@ -79,3 +79,41 @@ O projeto Sabedoria+ está em constante evolução. Alguns dos próximos passos 
     Expansão da Comunidade: Promover ativamente a plataforma para aumentar a participação de mentores e aprendizes.
 
     Feedback da Comunidade: Coletar feedback dos usuários para identificar áreas de melhoria contínua.
+
+# Pessoas Desenvolvedoras do Projeto
+
+
+<table>
+  <tr>
+    <td =align="center" style="font-size:15px">
+  	 <h3>
+          <b>Emily Cavalcanti</b>
+          </h3>
+    </td>
+ <td align="center" >
+        <h3>	
+          <b>Jeferson Smith</b>	
+	</h3>
+
+ <td align="center">
+ 	<h3>
+          <b>Jenifer Penha</b>
+  	</h3>
+
+ <td align="center">
+ 	<h3>
+          <b>João Filho</b>
+	</h3>
+
+ <td align="center"">
+	<h3>
+          <b>Jonathan Gomes</b>
+	</h3>
+
+ <td align="center" >
+	<h3>
+          <b>Jonh Nattan</b>
+	</h3>
+
+  </tr>
+</table>
