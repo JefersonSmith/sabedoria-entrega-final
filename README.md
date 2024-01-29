@@ -1,18 +1,29 @@
-# Sabedoria +
-Sabedoria+ é uma plataforma de mentoria inovadora, onde os idosos assumem o papel de mentores, 
-compartilhando suas experiências e sabedoria com a geração mais jovem.
-O projeto visa promover a conexão intergeracional e proporcionar uma troca valiosa de conhecimento.
+![Badge atualizacao](http://img.shields.io/static/v1?label=ATUALIZACAO&message=EM%20JANEIRO2024&color=GREEN&style=for-the-badge)
+<h1 align="center">SABEDORIA +</h1>
 
-Link do nosso projeto:
-https://sabedoriamais.azurewebsites.net/
 
 <p align="center">
   <img alt="Readme Titulo" src="https://github.com/JefersonSmith/sabedoria-entrega-final/assets/123952270/98274221-aaa5-4c0f-a31f-d8b7296eb4cf">
 </p>
+Sabedoria+ é uma plataforma de mentoria inovadora, desenvolvida pelo squad 20, um grupo de estudantes no curso de Desenvolvimento Web Full Stack, da Recode Pro 2023. Em nossa proposta os idosos assumem o papel de mentores, compartilhando suas experiências e sabedoria com a geração mais jovem. Durante todo o processo, avaliamos diversos pontos importantes para compor a plataforma, desde layout até a acessibilidade. Além disso, fomos moldado-o a partir de diferentes versões, visando a melhoria e resultar numa ótima entrega.
+<br><br>
+Link do nosso projeto:
+https://sabedoriamais.azurewebsites.net/
+
 
 ## Tecnologias Utilizadas
 
-Liste as tecnologias (linguagens, ferramentas, bibliotecas) que você utilizou para elaborar o projeto. Essa parte é importante para quando um recrutador (que não tem conhecimento de programação) acessar o seu projeto, ele vai saber só olhando a documentação quais tecnologias você já conhece!
+
+No desenvolvimento deste projeto, utilizamos uma abordagem tecnológica diversificada para garantir eficiência e flexibilidade.
+ 
+No front-end, adotamos tecnologias modernas como HTML5, CSS3, JavaScript, garantindo uma interface interativa e responsiva. Além do Bootstrap para otimizar o layout e garantir uma aparência consistente em diferentes dispositivos.
+ 
+Na construção do back-end, empregamos o Java Spring e o Thymeleaf
+ 
+Para o banco de dados, escolhemos o MySQL, visando uma gestão eficaz dos dados.
+ 
+Por fim, para fazer o deploy, decidimos pelo Azure.
+
 
 * [Java Spring](https://spring.io/)
 * [MySQL](https://www.mysql.com/)
